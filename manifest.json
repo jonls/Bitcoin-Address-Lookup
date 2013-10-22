@@ -1,6 +1,6 @@
 {
     "name": "Bitcoin Address Lookup",
-    "version": "0.1",
+    "version": "0.2",
     "manifest_version": 2,
 
     "description": "Lookup Bitcoin addresses from context menu.",

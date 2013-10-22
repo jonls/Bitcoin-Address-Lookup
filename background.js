@@ -33,12 +33,12 @@ var lookupItemId = chrome.contextMenus.create({title: 'Lookup Bitcoin address',
 
 chrome.contextMenus.onClicked.addListener(function (info, tab) {
     if (info.menuItemId == lookupItemId) {
-	if (info.linkUrl) {
+	if (info.selectionText) {
+	    openAddressInfo(info.selectionText);
+	} else if (info.linkUrl) {
 	    var parsed = parseBitcoinURL(info.linkUrl);
 	    if (parsed) openAddressInfo(parsed.address);
 	    else window.alert('Invalid Bitcoin address!');
-	} else if (info.selectionText) {
-	    openAddressInfo(info.selectionText);
 	}
     }
 });
