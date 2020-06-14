@@ -23,7 +23,7 @@ function parseBitcoinURL(url) {
 
 /* Open address info page in new tab. */
 function openAddressInfo(address) {
-    chrome.tabs.create({ url: 'https://blockchain.info/address/'+encodeURIComponent(address) });
+    chrome.tabs.create({ url: 'https://www.blockchain.com/btc/address/'+encodeURIComponent(address) });
 }
 
 var lookupItemId = chrome.contextMenus.create({title: 'Lookup Bitcoin address',
